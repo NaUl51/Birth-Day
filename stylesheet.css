@@ -1268,17 +1268,50 @@ audio {
 	margin-top: 50px;
 }
 .message {
-	margin-top: 200px;
-	display: none;
+    margin-top: 200px;
+    display: none; /* Keep this to hide initially */
 }
+
+.message.show {
+    display: block; /* Show the message */
+    -webkit-animation: fadeIn 5s linear forwards; /* Fade-in over 10 seconds */
+    animation: fadeIn 5s linear forwards;
+}
+
 .message p {
-	font-family: 'Signika', sans-serif;
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #C4515C;
-	text-shadow: 2px 2px 2px #FFF;
-	display: none;
-	font-weight: bold;
+    font-family: 'Signika', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #C4515C;
+    text-shadow: 2px 2px 2px #FFF;
+    display: none;
+    font-weight: bold;
+}
+
+.message p.show {
+    display: block;
+    -webkit-animation: fadeInText 5s linear forwards; /* Adjust time as needed */
+    animation: fadeInText 5s linear forwards;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .btn-primary {
